@@ -73,6 +73,7 @@ class PostgresPipeline:
         self.conn.close()
 
     def process_item(self, item, spider):
+        print("Processing item:", item)  # Debug statement
         # Insert item into the table
         try:
             insert_query = sql.SQL("""
